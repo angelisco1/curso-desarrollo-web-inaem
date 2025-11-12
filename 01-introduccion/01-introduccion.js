@@ -202,6 +202,7 @@ for (let i = 0; i < 3; i++) {
 
 // En pos se guarda el índice del array de colores en cada iteración
 for (let pos in colores) {
+    console.log(typeof Number(pos))
     console.log(`${colores[pos]}: ${sabores[pos]}`)
 }
 
@@ -210,3 +211,43 @@ for (let persona of lista3Personas) {
     console.log(persona.nombre)
     // console.log(persona['nombre'])
 }
+
+/* Ejercicio:
+- iterar el array de lista3Personas usando alguno de los bucles anteriores
+- mostrar los datos con el siguiente formato:
+1 - Charly (charly@gmail.com)
+2 - Ángel (angel@gmail.com)
+3 - Mike (mike@gmail.com)
+
+Intentar hacerlo con String Interpolation
+Para convertir un string a number -> Number(i)
+*/
+console.log([1, 2, 3, 4, 0, 1, 2].length)
+console.log(lista3Personas.length)
+
+for (let i = 0; i < lista3Personas.length; i++) {
+    console.log(`${i+1} - ${lista3Personas[i].nombre} (${lista3Personas[i]['email']})`)
+}
+
+for (let pos in lista3Personas) {
+  console.log(`${Number(pos)+1} - ${lista3Personas[pos].nombre} (${lista3Personas[pos]['email']})`)  
+}
+
+let j = 1
+for (let persona of lista3Personas) {
+    console.log(`${j} - ${persona.nombre} (${persona['email']})`)
+    j++;
+}
+
+let usuarioHaAceptado = true
+while(!usuarioHaAceptado) {
+    usuarioHaAceptado = confirm('Aceptas usar JS como lenguaje para todo?')
+}
+console.log('El usuario ha aceptado')
+
+usuarioHaAceptado = true
+do {
+    usuarioHaAceptado = confirm('Aceptas usar JS como lenguaje para todo?')
+} while(!usuarioHaAceptado)
+
+// foreach, map, filter, reduce, find
