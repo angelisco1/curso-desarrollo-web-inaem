@@ -230,7 +230,7 @@ for (let i = 0; i < lista3Personas.length; i++) {
 }
 
 for (let pos in lista3Personas) {
-  console.log(`${Number(pos)+1} - ${lista3Personas[pos].nombre} (${lista3Personas[pos]['email']})`)  
+  console.log(`${Number(pos) + 1} - ${lista3Personas[pos].nombre} (${lista3Personas[pos]['email']})`)  
 }
 
 let j = 1
