@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="newsletter.css" rel="stylesheet" />
 </head>
 <body>
+    <div>
+        <h1>Mailchimp 3000</h1>
+    </div>
+
     <div>
         <form method="post">
             <div>
@@ -35,8 +40,35 @@
         </form>
 
     </div>
+
+    <hr />
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>TyC</th>
+                    <th>Publi</th>
+                    <th>Datos</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">Total:</td>
+                    <td id="totalSuscripciones" colspan="2">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
     
     <!-- <script src="app.js"></script> -->
-     <script src="newsletter.js"></script>
+    <script src="newsletter.js"></script>
 </body>
 </html>
