@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="newsletter.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
 </head>
 <body>
     <div>
@@ -48,12 +49,14 @@
             <thead>
                 <tr>
                     <th>Nº</th>
+                    <th>Id</th>
                     <th>Nombre</th>
                     <th>Email</th>
+                    <th>Fecha susc.</th>
                     <th>TyC</th>
                     <th>Publi</th>
                     <th>Datos</th>
-                    <th></th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -61,7 +64,7 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="5">Total:</td>
+                    <td colspan="7">Total:</td>
                     <td id="totalSuscripciones" colspan="2">0</td>
                 </tr>
             </tfoot>

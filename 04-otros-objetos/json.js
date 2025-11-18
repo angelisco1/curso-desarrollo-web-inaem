@@ -4,10 +4,12 @@ const persona = {
 }
 
 // Convierte un objeto de JS a un string en formato JSON
-const personaComoString = JSON.stringify(persona)
+const personaComoString = JSON.stringify(persona, null, 2)
+const personaComoString2 = JSON.stringify(persona, null)
 
 console.log(persona)
 console.log(personaComoString)
+console.log(personaComoString2)
 
 console.log(persona.nombre)
 // console.log(personaComoString.nombre)
