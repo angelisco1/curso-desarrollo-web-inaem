@@ -135,8 +135,8 @@ const addListenersBotonesEliminar = () => {
             // console.log(btn.getAttribute('data-id'))
             const posicionSuscripcion = btn.dataset.id
             suscripciones = eliminarSuscripcion(posicionSuscripcion)
-            // pintarSuscripcionesEnTabla()
-
+            
+            pintarSuscripcionesEnTabla()
         })
     })
 
