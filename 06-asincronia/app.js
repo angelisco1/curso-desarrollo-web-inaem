@@ -1,7 +1,7 @@
 const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
+const API_URL_INSTRUCCIONES = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
 
 const buscarCocktails = async (filtro) => {
-    // TODO: hacer petición a la API para obtener la lista de cocktails
     const response = await fetch(`${API_URL}${filtro}`)
     
     console.log(response)
@@ -23,6 +23,14 @@ const buscarCocktails = async (filtro) => {
     // ]
 }
 
+const buscarInstrucciones = async (id) => {
+    const response = await fetch(`${API_URL_INSTRUCCIONES}${id}`)
+    const data = await response.json()
+    console.log(data)
+    const instrucciones = data.drinks[0].strInstructionsES
+    return instrucciones
+}
+
 const pintarCocktails = (cocktails) => {
     const listado = document.querySelector('#listadoCocktails')
 
@@ -30,10 +38,31 @@ const pintarCocktails = (cocktails) => {
         return `<li id="${cocktail.idDrink}">
             ${cocktail.strDrink}
             <img src="${cocktail.strDrinkThumb}" width="80" alt="Imagen de ${cocktail.strDrink}" />
+            <button type="button" data-id="${cocktail.idDrink}" class="btnInstrucciones">
+                Ver instrucciones
+            </button>
         </li>`
     })
 
     listado.innerHTML = listaCocktailsHtml.join('')
+
+    const botones = document.querySelectorAll('.btnInstrucciones')
+    console.log(botones)
+
+    botones.forEach((boton) => {
+        boton.addEventListener('click', async () => {
+            const id = boton.dataset.id
+
+            const elementoLi = boton.parentElement
+            const mismoId = elementoLi.id
+
+            // buscarInstrucciones(mismoId)
+            const instruccionesDelCocktail = await buscarInstrucciones(id)
+            console.log(instruccionesDelCocktail)
+            alert(instruccionesDelCocktail)
+        })
+    })
+
 }
 
 const formulario = document.querySelector('#buscador')
@@ -46,6 +75,8 @@ formulario.addEventListener('submit', async (event) => {
 
     pintarCocktails(cocktails)
 })
+
+
 
 /*
 EJERCICIO:
