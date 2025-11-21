@@ -77,36 +77,46 @@ interface CarritoCompra {
     productos: Array<Producto>,
     // addProducto: (p: Producto) => void
     addProducto(p: Producto): void,
+    mostrarTotal(): string
 }
 
-const carrito1: CarritoCompra = {
-    productos: [],
-    addProducto: function(p: Producto) {
-        console.log(this)
-        this.productos.push(p)
 
-        function mostrarCarrito() {
-            console.log('Dentro', this)
-        }
-        // mostrarCarrito = mostrarCarrito.bind(this)
-        mostrarCarrito = mostrarCarrito.bind(mike)
-        mostrarCarrito()
+// const carrito1: CarritoCompra = {
+//     productos: [],
+//     addProducto: function(p: Producto) {
+//         console.log(this)
+//         this.productos.push(p)
 
-        let mostrarCarrito2 = () => {
-            console.log('Dentro 2: ', this)
-        }
-        mostrarCarrito2()
+//         function mostrarCarrito() {
+//             console.log('Dentro', this)
+//         }
+//         // mostrarCarrito = mostrarCarrito.bind(this)
+//         mostrarCarrito = mostrarCarrito.bind(mike)
+//         mostrarCarrito()
 
-    }
-}
+//         let mostrarCarrito2 = () => {
+//             console.log('Dentro 2: ', this)
+//         }
+//         mostrarCarrito2()
+//     },
+//     mostrarTotal() {
+//         let total = 0
+//         this.productos.forEach((p: Producto) => {
+//             total += p.precio * p.cantidad
+//         })
+//         return total + '€'
+//     }
+// }
 
-const pan: Producto = {
-    id: "abc",
-    nombre: 'Pan',
-    precio: 2.30,
-    cantidad: 2
-}
+// const pan: Producto = {
+//     id: "abc",
+//     nombre: 'Pan',
+//     precio: 2.30,
+//     cantidad: 2
+// }
 
-carrito1.addProducto(pan)
+// // carrito1.mostrarTotal = carrito1.mostrarTotal.bind(carrito1)
 
-console.log(this)
+// carrito1.addProducto(pan)
+// console.log(carrito1.mostrarTotal())
+// // console.log(this)

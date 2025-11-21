@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "transpilar": "tsc intro.ts --target es2024 -w"
+    "transpilar": "tsc intro.ts --target es2024 -w",
+    "transpilar2": "tsc clases.ts --target es2024 -w --moduleResolution nodenext --module nodenext"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "uuid": "^13.0.0"
   }
 }
