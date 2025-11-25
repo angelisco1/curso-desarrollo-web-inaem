@@ -1,0 +1,21 @@
+<h2>Tema 01: Data Bindig</h2>
+
+<h3>String Interpolation</h3>
+<p>Bienvenido {{nombre}}</p>
+<!-- <p>Bienvenido {{getNombre()}}</p> -->
+
+<h3>Property Binding</h3>
+<img [src]="urlLogo" width="150" alt="Logo de Angular">
+<!-- <img src="{{urlLogo}}" width="150" alt="Logo de Angular"> -->
+
+<h3>Event Binding</h3>
+<button type="button" (click)="saludar()">Saludar</button>
+<a href="http://google.com" (click)="mostrarHref($event)">Ir a google</a>
+<button type="button" (click)="resetNombre()">Reset nombre</button>
+
+<h3>Two Way Binding</h3>
+<input type="text" [(ngModel)]="nombre" >
+
+
+<h3>Ejercicio producto</h3>
+<app-producto></app-producto>

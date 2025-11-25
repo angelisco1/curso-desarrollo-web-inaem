@@ -179,3 +179,22 @@ console.log(desarrolladores)
 
 const nombresDesarrolladores = desarrolladores.map((trabajador) => trabajador.nombre)
 console.log(nombresDesarrolladores)
+
+
+
+const datosPersona = {
+    nombre: '',
+    contacto: {
+        email: '',
+        telefono: {
+            movil: '+34 666777888',
+            // fijo: {
+            //     numero: '999777555'
+            // }
+        }
+    }
+}
+console.log(datosPersona.contacto.telefono.fijo?.numero)
+// if (datosPersona.contacto.telefono
+//     && datosPersona.contacto.telefono.fijo
+//     && datosPersona.contacto.telefono.fijo.numero)

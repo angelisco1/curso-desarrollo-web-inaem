@@ -1,0 +1,16 @@
+<!--
+EJERCICIO:
+Crear una ficha de producto que tenga los siguientes datos:
+- titulo
+- descripcion
+- precio
+- fechaLanzamiento
+- imagen
+-->
+<div>
+    <h4>{{producto.titulo}}</h4>
+    <img [src]="producto.imagenUrl" width="100" />
+    <p>{{producto.descripcion}}</p>
+    <p>Precio: {{producto.precio | currency:'EUR'}}</p>
+    <p>Fecha: {{producto.fechaLanzamiento | date:'dd/MM/yyyy'}}</p>
+</div>

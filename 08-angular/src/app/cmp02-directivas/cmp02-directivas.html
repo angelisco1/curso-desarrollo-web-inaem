@@ -1,0 +1,58 @@
+<h2>Tema 02: Directivas</h2>
+
+<ul>
+    @for (animal of animales; track $index) {
+        <li>{{animal}}</li>
+    }
+</ul>
+
+<div>
+    <input type="text" [(ngModel)]="username">
+    <input type="password" [(ngModel)]="password">
+    <button type="button" (click)="login()">Login</button>
+</div>
+
+@if (estasAutenticado) {
+    <p>Bienvenido {{username}}</p>
+
+    @switch (usuarioValido.rol) {
+        @case ('premium') {
+            <p>Tu suscripción caduca en 32 días.</p>
+        }
+        @case ('admin') {
+            <p>Tu suscripción es ilimitada.</p>
+        }
+        @default {
+            <p>Suscribete para obtener los beneficios.</p>
+        }
+    }
+
+} @else {
+    <p>Logueate, por favor.</p>
+}
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Nº</th>
+            <th>Email</th>
+            <th>TyC</th>
+            <th>Publi</th>
+            <th>Datos</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (suscripcion of suscripciones; track suscripcion.num) {
+            <tr [ngClass]="{esPrimeraFila: $first, esUltimaFila: $last, filaPar: $even, filaImpar: $odd}">
+                <td>{{$index + 1}}</td>
+                <td>{{suscripcion.email}}</td>
+                <td>{{suscripcion.tyc ? '✔' : '❌'}}</td>
+                <td>{{suscripcion.publi ? '✔' : '❌'}}</td>
+                <td>{{suscripcion.datos ? '✔' : '❌'}}</td>
+                <td>{{suscripcion.fechaSuscripcion}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
