@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgClass } from "@angular/common";
+import { DatePipe, NgClass } from "@angular/common";
+import { ToIconPipe } from '../cmp03-pipes/pipes/to-icon-pipe';
 
 @Component({
   selector: 'app-cmp02-directivas',
-  imports: [FormsModule, NgClass],
+  imports: [
+    FormsModule,
+    NgClass,
+    ToIconPipe,
+    DatePipe,
+  ],
   templateUrl: './cmp02-directivas.html',
   styleUrl: './cmp02-directivas.css',
 })

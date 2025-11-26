@@ -48,10 +48,10 @@
             <tr [ngClass]="{esPrimeraFila: $first, esUltimaFila: $last, filaPar: $even, filaImpar: $odd}">
                 <td>{{$index + 1}}</td>
                 <td>{{suscripcion.email}}</td>
-                <td>{{suscripcion.tyc ? '✔' : '❌'}}</td>
-                <td>{{suscripcion.publi ? '✔' : '❌'}}</td>
-                <td>{{suscripcion.datos ? '✔' : '❌'}}</td>
-                <td>{{suscripcion.fechaSuscripcion}}</td>
+                <td>{{suscripcion.tyc | toIcon}}</td>
+                <td>{{suscripcion.publi | toIcon}}</td>
+                <td>{{suscripcion.datos | toIcon}}</td>
+                <td>{{suscripcion.fechaSuscripcion | date:'dd MMM yyyy'}}</td>
             </tr>
         }
     </tbody>

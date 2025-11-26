@@ -1,0 +1,44 @@
+{
+  "informes": [
+    {
+      "id": "1",
+      "titulo": "El caballo blanco de Santiago",
+      "contenido": "El caballo blanco de Santiago, no era blanco, era gris.",
+      "usuarioId": 1,
+      "fechaAlta": 0,
+      "estado": "investigando"
+    },
+    {
+      "id": "2",
+      "titulo": "El niño vampiro sale de la cueva",
+      "contenido": "Tras 1900 años encerrado en la cueva, se ha descubierto que por las noches si que salia.",
+      "usuarioId": 1,
+      "fechaAlta": 0,
+      "estado": "cerrado"
+    },
+    {
+      "id": "1051",
+      "titulo": "Aumenta la venta de pitos y flautas",
+      "contenido": "Aumenta la venta de pitos y flautas",
+      "estado": "creado",
+      "usuarioId": 1,
+      "fechaAlta": 1764099339221
+    },
+    {
+      "id": "d314",
+      "titulo": "aaa",
+      "contenido": "aaaaaaaaaa",
+      "estado": "creado",
+      "usuarioId": 1,
+      "fechaAlta": 1764100328082
+    },
+    {
+      "id": "e433",
+      "titulo": "bbbb",
+      "contenido": "bbbbbbbbb",
+      "estado": "creado",
+      "usuarioId": 1,
+      "fechaAlta": 1764100665405
+    }
+  ]
+}

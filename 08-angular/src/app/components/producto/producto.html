@@ -8,7 +8,7 @@ Crear una ficha de producto que tenga los siguientes datos:
 - imagen
 -->
 <div>
-    <h4>{{producto.titulo}}</h4>
+    <h4>{{producto.titulo | titlecase}}</h4>
     <img [src]="producto.imagenUrl" width="100" />
     <p>{{producto.descripcion}}</p>
     <p>Precio: {{producto.precio | currency:'EUR'}}</p>
